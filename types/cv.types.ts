@@ -26,8 +26,21 @@ export interface Education {
   graduationYear: string;
 }
 
+enum SkillLevel {
+  Beginner = "Basico",
+  Intermediate = "Intermedio",
+  Advanced = "Avanzado",
+  Expert = "Experto",
+} 
+export interface Skills{
+  id: string;
+  skillName:string;
+  level:SkillLevel;
+}
+
 export interface CVData {
   personalInfo: PersonalInfo;
   experiences: Experience[];
   education: Education[];
+  skils:Skills[];
 }
